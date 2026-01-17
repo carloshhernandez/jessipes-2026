@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Recipe Collection</title>
+    <style>
+        @media print {
+            @page {
+                size: letter;
+                margin: 0.75in;
+            }
+            
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .no-print {
+                display: none;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        .cover {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .cover h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .cover .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .toc {
+            padding: 3rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        .toc h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .toc-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .toc-category {
+            font-weight: bold;
+            color: #764ba2;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .toc-item {
+            margin-left: 1.5rem;
+            margin-bottom: 0.3rem;
+            color: #555;
+        }
+
+        .recipe {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .recipe h2 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #764ba2;
+            padding-bottom: 0.5rem;
+        }
+
+        .recipe h3 {
+            font-size: 1.5rem;
+            color: #764ba2;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .recipe h4 {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .recipe ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .recipe li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .recipe ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .recipe ol li {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: #764ba2;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .print-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .print-button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <h1>2026 Recipes</h1>
+        <p class="subtitle">A Collection of Favorite Dishes</p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="toc">
+        <h2>Contents</h2>
+        
+        <div class="toc-section">
+            <div class="toc-category">Breakfast</div>
+            <div class="toc-item">Caramelized Onion and Croissant Breakfast Strata</div>
+            <div class="toc-item">Churro-inspired French Toast Bites</div>
+            <div class="toc-item">Hawaiian Roll Pumpkin French Toast</div>
+            <div class="toc-item">Apple Cider Cinnamon Rolls with Browned Butter Cream Cheese Icing</div>
+        </div>
+
+        <div class="toc-section">
+            <div class="toc-category">Appetizers</div>
+            <div class="toc-item">Garlic Butter Croissant Jalapeño Poppers</div>
+            <div class="toc-item">Charcuterie Dip</div>
+            <div class="toc-item">Chili Crisp Brie Sourdough</div>
+            <div class="toc-item">Peach Cobbler Baked Brie</div>
+        </div>
+
+        <div class="toc-section">
+            <div class="toc-category">Sides</div>
+            <div class="toc-item">Brussel Sprout Salad</div>
+            <div class="toc-item">Garlic and Herb Roasted Potatoes</div>
+            <div class="toc-item">Hot Honey Tortellini Peach Salad</div>
+            <div class="toc-item">Summer Peach Charcuterie</div>
+            <div class="toc-item">Hot Honey Summer Pasta Salad</div>
+            <div class="toc-item">Blistered Shishito and Corn Salad</div>
+            <div class="toc-item">Crispy Smashed Potato Salad</div>
+            <div class="toc-item">China Coast Coleslaw</div>
+        </div>
+
+        <div class="toc-section">
+            <div class="toc-category">Entrées</div>
+            <div class="toc-item">Incredibly Easy Crockpot Lasagna</div>
+            <div class="toc-item">Tuscan Chicken Orzo</div>
+            <div class="toc-item">Corn Potage</div>
+            <div class="toc-item">Crispy, Juicy Middle Eastern Meat-Stuffed Pitas</div>
+            <div class="toc-item">Cucumber Salad</div>
+            <div class="toc-item">Peanut Chili Noodles</div>
+            <div class="toc-item">One-Pan Chicken Shawarma with Roasted Garlic Sauce</div>
+            <div class="toc-item">Avgolemono</div>
+            <div class="toc-item">Sausage Gnocchi Soup</div>
+            <div class="toc-item">Creamy Sausage Orzo</div>
+            <div class="toc-item">One-Pot Braised Beef Rigatoni</div>
+            <div class="toc-item">Caramelized Onion and Garlic Spaghetti</div>
+            <div class="toc-item">Mexican Street Corn White Chicken Chili</div>
+            <div class="toc-item">French Dip Sandwich</div>
+            <div class="toc-item">Shepherd's Pie Stuffed Potatoes</div>
+            <div class="toc-item">Chicken Pot Pie Twice Baked Potatoes</div>
+            <div class="toc-item">Chunky Dumpling Salsa</div>
+        </div>
+
+        <div class="toc-section">
+            <div class="toc-category">Desserts</div>
+            <div class="toc-item">Frosted Brown Sugar Pop Tart Bars</div>
+            <div class="toc-item">London Fog Cake</div>
+            <div class="toc-item">Espresso Martini Brownies</div>
+        </div>
+
+        <div class="toc-section">
+            <div class="toc-category">Beverages</div>
+            <div class="toc-item">Corona Sunrise</div>
+            <div class="toc-item">Iced Espresso Latte</div>
+            <div class="toc-item">Piña Colada Beach Buckets</div>
+            <div class="toc-item">Autumn Spritz Mocktail</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- BREAKFAST RECIPES -->
+    <div class="recipe">
+        <span class="category-badge">Breakfast</span>
+        <h2>Caramelized Onion and Croissant Breakfast Strata</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>10-12 pieces of bacon</li>
+            <li>10 eggs</li>
+            <li>1/2 tsp salt</li>
+            <li>Cracked pepper</li>
+            <li>1/2 tsp garlic powder</li>
+            <li>1 tbsp Dijon mustard</li>
+            <li>1 large white onion, thinly sliced</li>
+            <li>2 tbsp butter</li>
+            <li>5-6 mini croissants</li>
+            <li>3/4 cup shredded sharp white cheddar</li>
+            <li>3-4 tbsp cream cheese spread (split up throughout)</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Preheat your oven 400 degrees. Lay your bacon out on a baking sheet with tinfoil trying not to overlap them. As your oven is preheating, thinly slice your white onion. Put the bacon in, and bake for 7 minutes, flip, 7 more minutes, drain oil and set on paper towels to soak up grease.</li>
+            <li>In a large skillet, melt 2 tbsp of butter and begin cartelizing your onions on low-medium heat. This process takes a bit, so practice patience, occasional stirring, and get these nice and caramelized (should take about 25 minutes).</li>
+            <li>Whisk together your eggs, garlic powder, salt, pepper, and dijon mustard. Spray a baking pan, lay a layer of caramelized onions down, then sprinkle chopped bacon on top. Pour your egg mixture over. Add more onions and bacon. Top with shredded cheddar and broken up croissants, add a little more shredded cheddar and spoonfuls of cream cheese. Bake for 375 for 30 minutes.</li>
+            <li>Top with chives</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Breakfast</span>
+        <h2>Churro-inspired French Toast Bites</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>3 eggs</li>
+            <li>3/4 cup half and half</li>
+            <li>1/2 teaspoon cinnamon</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>3 tbsp salted butter, divided</li>
+            <li>1 12-pack King's Hawaiian Original Sweet Rolls</li>
+            <li>1/4 cup white sugar</li>
+            <li>1/2 teaspoon cinnamon</li>
+            <li>1/3 cup salted caramel or syrup for dipping</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>In a medium sized bowl, combine eggs, half and half, cinnamon and vanilla and whisk until combined.</li>
+            <li>Tear your sweet rolls into individual rolls and submerge them in the French toast batter for about 15-20 seconds but no longer as they will get too soggy.</li>
+            <li>Meanwhile, heat a large fry pan over medium heat and melt 2 tbsp of salted butter.</li>
+            <li>Add half of the rolls and cook until golden brown on all 6 sides. Remove them from the pan, add the rest of the butter and the rest of the rolls and repeat the process.</li>
+            <li>Once they're all cooked, add white sugar and cinnamon to a shallow bowl or dish and stir until combined.</li>
+            <li>Toss each one of the cooked French toast sweet rolls in the cinnamon sugar until coated.</li>
+            <li>Plate them and serve with salted caramel sauce for dipping.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Breakfast</span>
+        <h2>Hawaiian Roll Pumpkin French Toast</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>4 eggs</li>
+            <li>2/3 cup milk (whole, low-fat or skim)</li>
+            <li>1/2 cup pumpkin puree</li>
+            <li>1 1/2 tsp vanilla extract</li>
+            <li>1 tsp ground cinnamon</li>
+            <li>1 tsp pumpkin pie spice</li>
+            <li>Hawaiian Rolls, sliced horizontally (King's Hawaiian brand sweet Hawaiian Rolls)</li>
+            <li>Optional: powdered sugar and maple syrup</li>
+        </ul>
+
+        <h3>Directions</h3>
+        <ol>
+            <li>Preheat oven to 250 degrees</li>
+            <li>Slice rolls horizontally and then vertically into 3 pieces.</li>
+            <li>Place rolls in the oven for 3 to 5 minutes or until golden brown</li>
+            <li>Whisk together eggs, milk, vanilla, cinnamon, pumpkin purée and pumpkin pie spice salt in a wide, deep bowl.</li>
+            <li>Heat a griddle or large skillet over medium heat and brush with 1 Tbsp of the butter.</li>
+            <li>Working in batches, dip Hawaiian roll halves into egg/milk mixture until saturated and shake off excess liquid before placing rolls on heated griddle.</li>
+            <li>Cook until golden brown, about 2-3 minutes. Flip and cook for another 2-3 minutes on other side.</li>
+            <li>Remove to a plate and keep warm while you continue cooking the remaining rolls. Add more butter to griddle as needed until all rolls have been dipped and toasted.</li>
+            <li>Sprinkle powdered sugar over Hawaiian roll French Toast and drizzle on maple syrup, if desired, before serving.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Breakfast</span>
+        <h2>Apple Cider Cinnamon Rolls with Browned Butter Cream Cheese Icing</h2>
+        
+        <h4>Apple Cider Cinnamon Roll Dough</h4>
+        <ul>
+            <li>0.13 cup warm water</li>
+            <li>1.13 tsp traditional dry yeast</li>
+            <li>0.38 cup warm apple cider, or juice</li>
+            <li>3 tbsp butter, melted</li>
+            <li>1 egg, beaten</li>
+            <li>0.17 cup sugar, plus a pinch</li>
+            <li>0.5 tsp cinnamon</li>
+            <li>0.38 tsp salt</li>
+            <li>2.25 cups all-purpose flour, plus extra</li>
+        </ul>
+
+        <h4>Apple Filling</h4>
+        <ul>
+            <li>1 tbsp butter</li>
+            <li>2 apples, peeled and finely diced</li>
+            <li>1 tbsp apple cider, or juice</li>
+            <li>0.5 tsp lemon juice</li>
+            <li>0.17 cup brown sugar, packed</li>
+            <li>0.5 tbsp cornstarch</li>
+            <li>0.5 tsp cinnamon</li>
+            <li>pinch salt</li>
+        </ul>
+
+        <h4>Cinnamon Filling</h4>
+        <ul>
+            <li>4 tbsp or 1 stick butter, softened</li>
+            <li>0.5 cup brown sugar, packed</li>
+            <li>0.5 tbsp cinnamon</li>
+        </ul>
+
+        <h4>Browned Butter Cream Cheese Icing</h4>
+        <ul>
+            <li>3 tbsp butter</li>
+            <li>3 oz cream cheese, softened</li>
+            <li>1.25 cups icing sugar</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        
+        <h4>Cinnamon Roll Dough</h4>
+        <ol>
+            <li>Heat the water to between 105°F and 115°F. Add a pinch of sugar and the yeast. Stir briefly and then set aside for the yeast to activate, about 5 minutes.</li>
+            <li>In the bowl of a stand mixer fitted with a dough hook, combine the warm apple cider, melted butter, eggs, sugar, and the yeast mixture. Stir together and then add the flour, cinnamon, and salt.</li>
+            <li>Mix, using the dough hook, until the dough starts to come together. Scrape down the sides occasionally to encourage the dough to come together. If the dough is too sticky and sticks to the side without forming a ball, then add more flour, a tablespoon at a time.</li>
+            <li>Continue mixing with a dough hook on low speed for about 5 minutes until the dough is soft and stretchy. After mixing, take the dough out and lightly knead a couple of times on the counter to bring it together into a smooth ball.</li>
+            <li>Transfer the dough to a greased bowl. Rub a little oil on top of the dough. Cover with cling film or a tea towel and then set in a warm place to rise for 1 to 1 1/2 hours until double in size.</li>
+        </ol>
+
+        <h4>Apple Filling</h4>
+        <ol>
+            <li>Start the apple filling right after you make the dough so that it has time to cool down. Melt the butter in a saucepan over medium heat. Add the finely diced apples along with the apple juice and lemon juice and cook until the apples begin to soften, about 3 to 4 minutes.</li>
+            <li>In a small bowl, combine the brown sugar, cornstarch, cinnamon, and salt. Stir together and ensure there are no lumps.</li>
+            <li>When the apples are tender but still have a little bite to them, add the sugar mixture and stir together. Cook the apples until the sauce thickens. Remove from the heat and let the filling cool completely.</li>
+        </ol>
+
+        <h4>Cinnamon Filling</h4>
+        <ol>
+            <li>In a small bowl, combine the softened butter, brown sugar, and cinnamon. Blend together using a spatula until fully combined.</li>
+        </ol>
+
+        <h4>Assemble the rolls</h4>
+        <ol>
+            <li>After the dough has risen, punch it down to deflate completely. Transfer the dough to a lightly floured counter. Roll the dough out into a large rectangle, about 18" by 10" in size. Spread the cinnamon filling over the dough.</li>
+            <li>Drop the apple filling over the cinnamon filling and gently spread it out evenly. Spray a 9" by 13" baking pan with non-stick spray. Roll the dough up starting with the long side. Use a sharp knife to cut the roll into 12 pieces. Place the rolls in the prepared pan. Cover with a tea towel and let rise for another 30 minutes or until double in size.</li>
+        </ol>
+
+        <h4>Browned Butter Icing</h4>
+        <ol>
+            <li>In a small pan or saucepan, melt the butter over medium heat. Let the butter simmer gently until it begins to brown, about 4 to 5 minutes. The butter will foam and then become clear, with the milk solids dropping to the bottom of the pan. Swirl the pan while the butter is cooking to make sure it browns evenly.</li>
+            <li>When the milk solids begin to turn brown, remove the butter from the heat. Transfer to a bowl and allow to cool. Let the browned butter cool until it is the consistency of softened butter.</li>
+            <li>In a stand mixer fitted with a paddle attachment, combine the softened browned butter and cream cheese. Beat together until creamy. Add the icing sugar and beat until combined.</li>
+        </ol>
+
+        <h4>Bake the rolls</h4>
+        <ol>
+            <li>Preheat the oven to 350°F. Bake the cinnamon rolls for 25 to 35 minutes until lightly browned and cooked through. When the rolls are done, transfer the baking dish to a rack and let sit for a few minutes. Drop the icing onto the warm rolls and let sit for a minute to soften. Gently spread the icing over the rolls. Enjoy!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- APPETIZER RECIPES -->
+    <div class="recipe">
+        <span class="category-badge">Appetizer</span>
+        <h2>Garlic Butter Croissant Jalapeño Poppers</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Jalapeños</li>
+            <li>Choice of cheese</li>
+            <li>Crescent dough</li>
+            <li>Garlic</li>
+            <li>Butter</li>
+            <li>Italian seasoning</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Slice a jalapeño in half and take out the insides.</li>
+            <li>Fill with cheese of choice (I chose cheddar) and wrap in crescent dough.</li>
+            <li>Bake at 375 until golden brown.</li>
+            <li>Brush them with garlic butter after (a mix of minced garlic, butter, and Italian seasonings)</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Appetizer</span>
+        <h2>Charcuterie Dip</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Chopped Cambert Cheese</li>
+            <li>Prosciutto</li>
+            <li>Garlic butter</li>
+            <li>Blackberries</li>
+            <li>Rosemary</li>
+            <li>Dollops of raspberry jam</li>
+            <li>Seasoned with S&P</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Bake until melty</li>
+            <li>Serve with French bread</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Appetizer</span>
+        <h2>Chili Crisp Brie Sourdough</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Sourdough loaf</li>
+            <li>Brie</li>
+            <li>Chili crunch oil</li>
+            <li>Honey</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ul>
+            <li>Stuff the sourdough with the brie.</li>
+            <li>Top with chili crunch oil + a drizzle of honey.</li>
+            <li>Bake until melty.</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Appetizer</span>
+        <h2>Peach Cobbler Baked Brie</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Wheel of Brie</li>
+            <li>Peaches</li>
+            <li>Lemon</li>
+            <li>Brown sugar</li>
+            <li>Bread</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>To make it, add a wheel of Brie cheese to the center of a baking dish.</li>
+            <li>Score the cheese.</li>
+            <li>Surround the cheese with diced peaches.</li>
+            <li>Squeeze 1/2 lemon over the peaches and add 1/2 cup of brown sugar on top as well.</li>
+            <li>Drizzle honey on top & bake at 350° for about 20-25 minutes or until the Brie has completely melted and the peaches have started to caramelize.</li>
+            <li>If you are using canned peaches, I would check it at 15-20 minutes.</li>
+            <li>Serve with buttery toasted bread and enjoy!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- SIDE RECIPES -->
+    <div class="recipe">
+        <span class="category-badge">Side</span>
+        <h2>Brussel Sprout Salad</h2>
+        
+        <h4>Salad</h4>
+        <ul>
+            <li>Brussel Sprouts (washed and mandolined)</li>
+            <li>Grated Parm Cheese</li>
+            <li>Pine Nuts</li>
+            <li>Dried Cranberries</li>
+            <li>Minced shallot</li>
+            <li>Lemon zest</li>
+            <li>Chives</li>
+        </ul>
+
+        <h4>Dressing</h4>
+        <ul>
+            <li>¼ cup olive oil</li>
+            <li>¼ cup lemon juice</li>
+            <li>1 minced garlic clove</li>
+            <li>Yellow mustard</li>
+            <li>Honey</li>
+            <li>Garlic powder</li>
+            <li>Onion powder</li>
+            <li>Salt & pepper</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Mix.</li>
+            <li>Eat.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Side</span>
+        <h2>Garlic and Herb Roasted Potatoes</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Yukon Gold Potatoes</li>
+            <li>Salt</li>
+            <li>Baking Soda - 1 tsp</li>
+            <li>Vegetable Oil (great with beef tallow too)</li>
+        </ul>
+
+        <h4>Garlic and Herb Butter</h4>
+        <ul>
+            <li>Fresh Thyme - 1 tbsp</li>
+            <li>Fresh Rosemary - 1 tbsp</li>
+            <li>Fresh Parsley - 1 tbsp</li>
+            <li>Garlic - 4 cloves chopped or minced</li>
+            <li>Salt - 1 tbsp</li>
+            <li>Butter - 4 tbsp</li>
+            <li>Shredded Parmesan Cheese to garnish</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Peel and cut Yukon Golds into big chunks (2in+ so they don't break down when boiling)</li>
+            <li>Add to pot with water, salt and 1 tsp baking soda (baking soda helps creates the rough exterior texture). Boil until just under fork tender</li>
+            <li>Strain and shake the potatoes (shaking roughs up the surface for crispiness)</li>
+            <li>Steam in colander for a minimum of 20 mins (this removes moisture, don't skip) **This just means let them stay in the colander and cool**</li>
+            <li>Preheat the oven to 425 degrees and place the oiled dish into the preheating oven. Allow it to reach the oven temperature and then sit for an additional 10 minutes to get up to temperature (oil should be sizzling when potatoes go in)</li>
+            <li>Carefully add potatoes and salt generously, roast 45 mins flipping every 10 to 15 mins (flipping ensures even crispness)</li>
+            <li>While baking, mix melted butter with finely chopped fresh garlic, thyme, rosemary, parsley and salt.</li>
+            <li>Toss potatoes in garlic herb butter, finish with Parmesan and enjoy</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Side</span>
+        <h2>Hot Honey Tortellini Peach Salad</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>32oz tortellini, cooked</li>
+            <li>4oz prosciutto</li>
+            <li>8oz pearl mozzarella balls</li>
+            <li>15oz can corn kernels</li>
+            <li>3 small peaches, diced into small chunks</li>
+            <li>2 cups cherry tomatoes, sliced</li>
+            <li>1/2 cup basil, chopped</li>
+        </ul>
+
+        <h4>Dressing</h4>
+        <ul>
+            <li>1/2 cup extra virgin olive oil</li>
+            <li>1/3 cup hot honey</li>
+            <li>1 tbsp dijon mustard</li>
+            <li>3 tbsp red wine vinegar</li>
+            <li>2 cloves garlic, minced</li>
+            <li>1 tsp salt</li>
+            <li>1/2 tsp pepper</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Heat oven to 400F and line baking sheet with parchment paper. Add prosciutto in a flat layer and cook 10-15 minutes or until crispy. Set aside.</li>
+            <li>In a large bowl, add tortellini, mozzarella balls, corn, peaches, tomatoes, and basil.</li>
+            <li>Chop crispy prosciutto into small pieces and add to tortellini mixture.</li>
+            <li>In a glass measuring cup, add dressing ingredients in order as listed. Whisk together.</li>
+            <li>Pour dressing over tortellini mixture and toss until well combined and evenly coated.</li>
+            <li>Serve room temperature or cold!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Side</span>
+        <h2>Summer Peach Charcuterie</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Burrata</li>
+            <li>Summer produce (stone fruit including peaches, apricots, plums, cherries)</li>
+            <li>Heirloom tomatoes</li>
+            <li>Prosciutto</li>
+            <li>Olive Oil</li>
+            <li>Salt & Pepper</li>
+            <li>Fresh Basil and Mint</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Line each ingredient up in colorful rows</li>
+            <li>Drizzle with olive oil and top with salt & pepper</li>
+            <li>Finish by garnishing with basil and mint leaves</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Side</span>
+        <h2>Hot Honey Summer Pasta Salad</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>8 oz Cooked Pasta (I prefer bow ties)</li>
+            <li>2-3 TBSP Hot Honey</li>
+            <li>1 Large Lemon, juiced</li>
+            <li>1/2 C Olive Oil</li>
+            <li>1 tsp Salt</li>
+            <li>1 tsp Black Pepper</li>
+            <li>1/4 tsp Red Chili Flakes</li>
+            <li>1 C Sweet Whole Kernel Corn</li>
+            <li>1/4 C Crispy Bacon Bits</li>
+            <li>6 oz Fresh Mozzarella Pearls</li>
+            <li>1 C Cherry or Grape Tomatoes</li>
+            <li>2 TBSP Fresh Basil, chopped</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Cook pasta according to package directions - rinse under cold water.</li>
+            <li>Whisk together hot honey, lemon juice, olive oil, salt, pepper & chili flakes.</li>
+            <li>Add pasta, corn, bacon, mozzarella pearls, tomatoes and basil.</li>
+            <li>Toss to coat. Season with extra salt and pepper to taste and finish with an extra drizzle of hot honey.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Side</span>
+        <h2>Blistered Shishito and Corn Salad</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>6-8 oz. shishito peppers</li>
+            <li>¼ cup plus 2 Tbsp. extra virgin olive oil</li>
+            <li>3 Tbsp. minced shallots</li>
+            <li>3 Tbsp. finely chopped fresh cilantro</li>
+            <li>2 Tbsp. seasoned rice vinegar</li>
+            <li>½ tsp. ground cumin</li>
+            <li>½ tsp. kosher salt, divided</li>
+            <li>2 heaping cups fresh corn kernels (about 3 ears of corn)</li>
+            <li>1 medium avocado, cut into chunks</li>
+            <li>1/3 cup crumbled queso fresco or feta cheese</li>
+            <li>¼ cup pepitas</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Place peppers in a mixing bowl and toss with 2 Tbsp. olive oil. Preheat a cast iron skillet over medium-high. Once the pan is hot, add the peppers and arrange in a single layer. Cook, undisturbed, for at least 2 minutes before tossing and continuing to cook until the skin is blistered, about 5 minutes total. Use a pair of tongs to transfer peppers to a cutting board and let sit until cool enough to handle.</li>
+            <li>Meanwhile, combine shallots, cilantro, rice vinegar, cumin, and 1/4 tsp. salt in a medium bowl. Stream in remaining 1/4 cup olive oil, whisking to combine. Let sit for 10 minutes to allow shallots to soften.</li>
+            <li>Once peppers are cool enough to handle, chop them into small pieces and transfer back to the mixing bowl you used to oil them. (Discard stems.) Season with remaining 1/4 tsp. salt.</li>
+            <li>To the bowl with peppers, add corn, avocado, cheese, and pepitas. Season with another pinch of salt.</li>
+            <li>Pour dressing over salad and toss to combine. Garnish with extra cheese and pepitas, if desired. Serve at room temperature.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Side</span>
+        <h2>Crispy Smashed Potato Salad</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>2 lbs baby potatoes, scrubbed</li>
+            <li>Three scallions diced</li>
+            <li>2 tbs olive oil</li>
+        </ul>
+
+        <h4>Dressing (whisk to combine all)</h4>
+        <ul>
+            <li>3/4 cup Greek yogurt</li>
+            <li>1/2 cup kewpie mayo</li>
+            <li>2 tsp Dijon mustard</li>
+            <li>1/2 large lemon, juiced</li>
+            <li>2 tsp red wine vinegar</li>
+            <li>1 large garlic clove, minced</li>
+        </ul>
+
+        <h4>Salad ingredients</h4>
+        <ul>
+            <li>1/4 cup fresh dill, chopped</li>
+            <li>2 Tbsp fresh chives, minced</li>
+            <li>3 pickles, minced</li>
+            <li>1 shallot, fine chop</li>
+            <li>Salt and pepper to taste</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Halve baby gold potatoes, toss w/ olive oil + salt.</li>
+            <li>Place cut-side down on a sheet pan, sprinkle w/ 3 diced scallions.</li>
+            <li>Roast at 425°F for 30-35 mins until soft.</li>
+            <li>Take them out, smash w/ back of a glass, flip all over.</li>
+            <li>Broil 3-5 mins till golden, flip again, broil other side till crispy. Unreal crunch.</li>
+            <li>Then place in bowl and toss with the dressing, pickles, shallot, dill, chives, etc., and enjoy!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Side</span>
+        <h2>China Coast Coleslaw</h2>
+        
+        <h4>Dressing</h4>
+        <ul>
+            <li>3 Tbsp White Wine Vinegar</li>
+            <li>3 Tbsp Sugar</li>
+            <li>3 Tbsp Soy Sauce</li>
+            <li>1 Clove Garlic Minced</li>
+            <li>1/2 Tspn Sesame Oil</li>
+            <li>1 Cup Mayo</li>
+        </ul>
+
+        <h4>Salad</h4>
+        <ul>
+            <li>2/3 Cup Slivered Almonds</li>
+            <li>8 Cups coarsely Shredded Napa Cabbage</li>
+            <li>12 Ounces Snow Peas thinly sliced lengthwise</li>
+            <li>1 1/3 Cup Thinly Sliced Radishes</li>
+            <li>1 1/3 Cup Green Onions Chopped</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Whisk all to combine.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ENTRÉE RECIPES -->
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Incredibly Easy Crockpot Lasagna</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>1 lb ground beef (season with salt, Italian, & paprika)</li>
+            <li>24oz jar of marinara sauce</li>
+            <li>1 onion chopped</li>
+            <li>32 oz beef broth</li>
+            <li>4 cloves garlic minced</li>
+            <li>2 tsp Italian Seasoning</li>
+            <li>1 tsp each salt & pepper</li>
+            <li>1 tsp paprika</li>
+            <li>1 cup heavy cream</li>
+            <li>10-12 lasagna sheets broken up</li>
+            <li>1 ball mozzarella</li>
+            <li>1 1/4 cup Parmesan</li>
+            <li>15 oz ricotta</li>
+            <li>1 Tbsp Italian seasoning</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>To a crockpot, add marinara sauce, cooked ground beef, onion, garlic, broth & seasonings. Stir and cook on high for 3-4 hours.</li>
+            <li>Add in heavy cream, mozzarella, 1 cup Parmesan, and lasagna noodles. Cook for an additional 45 minutes on high.</li>
+            <li>Mix together the ricotta with 1/4 cup Parmesan and 1 Tbsp Italian seasoning. Dollop over the top and cover just long enough to let it get creamy.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Tuscan Chicken Orzo</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>2 lbs chicken breasts or thighs</li>
+            <li>1 (7oz.) jar sun-dried tomatoes (use 1tbsp. Of the oil too)</li>
+            <li>4 cloves garlic, minced</li>
+            <li>2 cups chicken broth</li>
+            <li>1 tsp Italian seasoning</li>
+            <li>Salt + pepper</li>
+            <li>1 cup dry orzo</li>
+            <li>1 cup milk or half-and-half</li>
+            <li>3 big handfuls spinach</li>
+            <li>½-¾ cup freshly grated parmesan</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Add chicken, sun-dried tomatoes (with 1 Tbsp. of oil), garlic, broth, Italian seasoning, salt & pepper to the crockpot.</li>
+            <li>Cook on low for 4-5 hours (or 3hrs on high), then shred the chicken in the crockpot.</li>
+            <li>Stir in orzo + milk. Cook 20-30 minutes on HIGH until the orzo is tender (this is for al dente). Cook 30-35 min if you prefer a softer bite. If you cook longer, add a little more broth.</li>
+            <li>Fold in spinach and parmesan until creamy and silky.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Corn Potage</h2>
+        
+        <h4>Corn Stock</h4>
+        <ul>
+            <li>Thick-cut bacon, cut into bite-sized chunks</li>
+            <li>4-6 sweet corn, kernels removed (keep the corn cores)</li>
+            <li>1 medium white onion, diced</li>
+            <li>8-10 garlic cloves, sliced</li>
+            <li>Chicken broth as needed</li>
+        </ul>
+
+        <h4>Other Ingredients</h4>
+        <ul>
+            <li>1 cup cream (or to taste)</li>
+            <li>Pepper to taste</li>
+            <li>Additional chicken stock, as needed</li>
+            <li>Reserved corn kernels, for topping</li>
+            <li>Crispy bacon bits</li>
+            <li>Parsley, for garnish</li>
+            <li>Croutons, for garnish</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Sauté your bacon until fully rendered and crispy. Set aside for later. Using the bacon grease sauté your onions, and garlic along with some corn kernels.</li>
+            <li>In a separate pot make a corn stock. Add your corn cores that you set aside, and fill the pot with chicken stock, and let simmer for 30-40 minutes.</li>
+            <li>Add the corn stock to your pot with the sautéed vegetables, and add more stock as needed, along with some black pepper.</li>
+            <li>Blend the mixture, add heavy cream, add back in bacon with fresh corn kernels.</li>
+            <li>Serve, garnish with parsley and enjoy!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Crispy, Juicy Middle Eastern Meat-Stuffed Pitas with Garlic Tahini Sauce</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>4 small pitas, cut in half</li>
+            <li>1 yellow onion, grated & squeezed dry</li>
+            <li>7 garlic cloves, minced</li>
+            <li>2 tbsp tomato paste</li>
+            <li>1/3 cup fresh parsley, chopped</li>
+            <li>1/3 cup fresh cilantro, chopped (optional but excellent)</li>
+            <li>1 tbsp olive oil</li>
+            <li>1 lb lean ground beef</li>
+            <li>Spices: 1 tsp salt, 1 tsp black pepper, 1 tsp cinnamon, 2 tsp cumin, 2 tsp paprika, 1 tsp allspice</li>
+        </ul>
+
+        <h4>For the Garlic Tahini Sauce</h4>
+        <ul>
+            <li>1/2 cup Greek yogurt</li>
+            <li>3 tbsp tahini</li>
+            <li>1/2 lemon, juiced</li>
+            <li>2 garlic cloves, minced</li>
+            <li>2 tbsp olive oil</li>
+            <li>1/4 cup fresh parsley, chopped</li>
+            <li>1/4 cup fresh cilantro, chopped</li>
+            <li>1 tsp each: cumin, salt, pepper, paprika</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Preheat your oven to 350°F (175°C). Grate your onion and squeeze every last drop of liquid out using paper towel or cheesecloth.</li>
+            <li>In a large bowl, combine the ground beef, tomato paste, minced garlic, all the spices, parsley, cilantro (if using), and that very dry grated onion. Mix with your hands for about 2 minutes.</li>
+            <li>Cut each pita in half. If they don't already have a pocket, carefully use a knife to make one. Now, pack them with your beef mixture - and I mean stuff them. You want them full but not bursting (ripped pita = heartbreak).</li>
+            <li>Crisp 'Em Up: Brush the outsides of the stuffed pitas lightly with olive oil. Heat a lightly oiled skillet over medium heat. Place each arayes meat-side down and sear for 1-2 minutes until you get that gorgeous crust. Then sear the pita sides until golden and crisp.</li>
+            <li>Transfer the seared arayes to a baking sheet and finish them in the oven for 10-15 minutes, until fully cooked through.</li>
+            <li>While they bake, whisk together all the garlic tahini sauce ingredients in a bowl. Taste and adjust lemon, salt, or garlic levels to your liking.</li>
+            <li>When the arayes are hot out of the oven, optionally brush them with melted garlic herb butter. Totally optional... but trust me, it hits.</li>
+            <li>Enjoy!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Cucumber Salad</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>1 medium cucumber finely sliced</li>
+            <li>half a small red onion (diced)</li>
+            <li>160g low fat greek yoghurt</li>
+            <li>garlic (minced or fresh)</li>
+            <li>half a squeeze of lemon / or add lemon juice</li>
+            <li>6ml of olive oil</li>
+            <li>salt & pepper</li>
+            <li>150g chicken breast (cooked)</li>
+            <li>optional lemon zest</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ul>
+            <li>Mix.</li>
+            <li>Enjoy.</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Peanut Chili Noodles</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>9 oz (250 g) hand-cut thick noodles (or any noodles you like)</li>
+            <li>1.5 tbsp peanut butter</li>
+            <li>1 tsp chili flakes (optional)</li>
+            <li>1/3 cup fresh green onion, sliced</li>
+            <li>2 tsp sesame seeds</li>
+            <li>5 garlic cloves, minced</li>
+            <li>1 tbsp white sugar (optional, but balances the heat)</li>
+            <li>1 tbsp chili crisp (+ 2 more tbsp extra for garnish)</li>
+            <li>1 tbsp rice vinegar</li>
+            <li>2 tbsp dark soy sauce</li>
+            <li>1/3 cup neutral oil (I use avocado)</li>
+            <li>3 tbsp reserved pasta water (optional)</li>
+            <li>More sliced green onion, for garnish</li>
+            <li>Fresh lime wedges, for garnish</li>
+            <li>I recommend "Lao Gan Ma Spicy Chili Crisp"</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Bring a pot of salted water to a boil and cook your noodles according to package instructions. Undercook them by about 30 seconds because they'll finish in the sauce. Save some pasta water, then drain and rinse the noodles under cold water so they don't stick together like clingy exes.</li>
+            <li>In a cold pan (no heat yet), add: peanut butter, chili flakes, green onion, sesame seeds, garlic, sugar, 1 tbsp chili crisp, rice vinegar, and dark soy sauce.</li>
+            <li>Heat 1/3 cup neutral oil until it's really hot (like "sizzle your eyebrows off" hot), then carefully pour it over the cold ingredients in the pan. Watch the magic happen. Stir it all together.</li>
+            <li>Toss in your noodles and coat them in the sauce. If you want them extra silky, turn on the heat to medium-low, splash in 2-3 tbsp of the reserved noodle water and thoroughly mix together.</li>
+            <li>Turn off the heat, top with more green onion, extra chili crisp, and lime wedges if you're fancy.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>One-Pan Chicken Shawarma with Roasted Garlic Sauce</h2>
+        
+        <h4>Chicken Marinade</h4>
+        <ul>
+            <li>1.5 lbs (680g) chicken thighs, boneless & skinless</li>
+            <li>1 lemon, juiced</li>
+            <li>5 garlic cloves, minced</li>
+            <li>Seasonings: 1 tbsp cumin, 2 tsp chili powder, 2 tsp paprika, 1 tsp turmeric, 1 tsp onion powder, 1 tsp black pepper and 1 tsp salt</li>
+            <li>4 tbsp olive oil</li>
+            <li>2 tbsp tomato paste</li>
+            <li>4 tbsp Greek yogurt</li>
+        </ul>
+
+        <h4>For the sheet pan</h4>
+        <ul>
+            <li>1 red onion, chopped into 6-8 chunks</li>
+            <li>4 tbsp olive oil</li>
+            <li>Fresh parsley + lemon slices for garnish</li>
+        </ul>
+
+        <h4>For the roasted garlic</h4>
+        <ul>
+            <li>1 garlic head, 1 tsp salt and 1 tbsp olive oil</li>
+        </ul>
+
+        <h4>For the Roasted Garlic Shawarma Sauce</h4>
+        <ul>
+            <li>1/2 cup Greek yogurt</li>
+            <li>3 tbsp mayonnaise</li>
+            <li>1 tsp black pepper</li>
+            <li>juice of 1/2 lemon, the whole roasted garlic head (squeezed), 2 tbsp fresh parsley, finely chopped</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Pat chicken dry with paper towel and cube it into large chunks. In a big bowl, mix the marinade ingredients: Greek yogurt, tomato paste, garlic, lemon juice, and all those glorious spices. Toss in the chicken until every piece is coated. Let it marinate as long as you can resist (I went straight to the pan because I'm impatient).</li>
+            <li>Preheat the oven to 425°F (220°C). Slice the top off a garlic head, drizzle with olive oil and salt, then wrap it up in foil like a little flavor present and place in a dish/tray. Pop it in the oven for 45-60 minutes.</li>
+            <li>Spread the marinated chicken chunks on a large casserole dish or sheet pan. Nestle in the red onion chunks, then drizzle 4 tbsp olive oil over everything.</li>
+            <li>Bake for 30-40 minutes until the chicken is browned, crisp at the edges, and cooked through. Remove the tray from the oven. Baste the chicken with the pan juices.</li>
+            <li>Squeeze the roasted garlic into a bowl, mash it then mix with Greek yogurt, mayo, lemon juice, pepper, and parsley. Taste and adjust.</li>
+            <li>Recommended plating: A bed of fluffy rice, topped with a handful of the shawarma chicken and red onion, a squeeze of fresh lemon, a showering of chopped parsley, and a drizzle of those beautiful pan juices.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Avgolemono</h2>
+        
+        <h4>Avgolemono</h4>
+        <ul>
+            <li>5-8 chicken thigh bone in, (can also be 1 whole small chicken)</li>
+            <li>Olive oil</li>
+            <li>1 tbsp of Italian seasoning</li>
+            <li>1 whole onion, diced</li>
+            <li>5-10 garlic cloves, minced</li>
+            <li>3/4 cup celery, diced</li>
+            <li>1 carrot, diced</li>
+            <li>Chicken broth as needed</li>
+            <li>¾ cup orzo pasta</li>
+            <li>Bay leaves (optional)</li>
+            <li>Salt and pepper to taste</li>
+        </ul>
+
+        <h4>Avgolemono Mixture</h4>
+        <ul>
+            <li>4 eggs</li>
+            <li>The juice of 2-3 lemons</li>
+            <li>Lemon zest</li>
+            <li>Reserved broth from the Avgolemono Soup</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Start by seasoning your chicken and searing it in a pot with a bit of oil until browned. Once golden, set the chicken aside for later.</li>
+            <li>In the same pot, sauté your vegetables until fragrant, then add Italian seasoning. add your chicken broth.</li>
+            <li>Return the chicken to the pot and set it to a gentle simmer for 45 minutes, or until tender. Once done, shred the chicken and add back to the soup.</li>
+            <li>Add the orzo pasta and let it cook in the broth for 8-10 minutes</li>
+            <li>Meanwhile, prepare the avgolemono mixture. In a separate bowl, whisk together eggs and add lemon juice/zest. To temper, pour in a thin stream a bit of hot soup while whisking constantly. This will prevent the eggs from scrambling.</li>
+            <li>Once tempered, gently stir the avgolemono mixture back into the pot.</li>
+            <li>Serve your soup hot, garnished with fresh dill/parsley and a drizzle of olive oil and enjoy!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Sausage Gnocchi Soup</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>1 lb mild Italian sausage</li>
+            <li>1 yellow onion</li>
+            <li>1 bag of spinach</li>
+            <li>1-2 tbsp minced garlic</li>
+            <li>2 cups chicken broth</li>
+            <li>2 cups heavy cream</li>
+            <li>3 oz grated Parmesan cheese</li>
+            <li>1 tsp of each salt, pepper, Italian seasoning, oregano, parsley, garlic & onion powder, crushed red pepper</li>
+            <li>1 package gnocchi</li>
+            <li>1 tbsp tomato paste</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Add olive oil to medium heat pan, cook 1 diced yellow onion until translucent</li>
+            <li>Add minced garlic</li>
+            <li>Add 1 lb mild italian sausage</li>
+            <li>Once cooked, add seasonings (salt, pepper, italian seasoning, parsley, oregano, garlic powder, onion powder & crushed red peppers, and tomato paste.</li>
+            <li>Then add 2 cups chicken broth.</li>
+            <li>Once mixture is boiling, add gnocchi. cook for 2-3 minutes.</li>
+            <li>Turn heat down to low and add 2 cups heavy cream.</li>
+            <li>Stir in 3 oz grated parmesean cheese ( can sub for romano cheese).</li>
+            <li>Add diced spinach to pan.</li>
+            <li>Let it simmer on low for 10 additional minutes to thicken sauce.</li>
+            <li>Serve and enjoy!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Creamy Sausage Orzo</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Italian sausage</li>
+            <li>1/2 medium onion</li>
+            <li>3-4 cloves of garlic</li>
+            <li>1 cup uncooked pasta</li>
+            <li>2 cups chicken broth</li>
+            <li>1 cup heavy cream</li>
+            <li>1/2 cup freshly grated parm</li>
+            <li>2 cups of spinach</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Brown your sausage in a large pan. Cook for about 5 minutes. Then add your chopped onion and cook for an additional 5 minutes. Add your orzo and garlic, cook for about 30 seconds.</li>
+            <li>Stir in broth and cream. Once it boils, cook for 10 minutes uncovered on medium/low heat. Stir often to prevent sticking.</li>
+            <li>Take pot off the heat and add in your spinach and Parmesan cheese. Mix until the spinach has wilted. Serve warm and enjoy!!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>One-Pot Braised Beef Rigatoni</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>2 lbs Chuck Roast</li>
+            <li>1 large Carrot, diced</li>
+            <li>2 stalks Celery, diced</li>
+            <li>1 large White Onion, diced</li>
+            <li>3 cloves Garlic</li>
+            <li>2 tbsp Tomato Paste</li>
+            <li>4 cups Beef Broth</li>
+            <li>4 cups Crushed Tomatoes</li>
+            <li>1 cup Water</li>
+            <li>2 sprigs Thyme</li>
+            <li>2 sprigs Rosemary</li>
+            <li>3 Bay Leaves</li>
+            <li>500g Rigatoni</li>
+            <li>2 tbsp Salt</li>
+            <li>1 tbsp Black Pepper</li>
+            <li>½ bunch Basil</li>
+            <li>2 tbsp Fresh Parsley, chopped</li>
+            <li>1 cup Parmesan Cheese</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Cut the beef into large, even chunks and season generously with salt and pepper. Heat a large Dutch pot over medium-high heat with a splash of oil, then sear the beef on all sides. Once browned, remove and set aside.</li>
+            <li>In the same pot, toss in your carrots, celery, onion, and garlic—sauté for 2-3 minutes. Add the tomato paste and let it cook down with the veg for another 2-3 minutes. Pour in the broth, crushed tomatoes, water, and toss in your thyme, rosemary, and bay leaves. Bring it all to a simmer, then return the beef to the pot.</li>
+            <li>Let that low-simmer magic happen for 2 hours, until the meat is fall-apart tender. Once done, take it off the heat and let it cool slightly. Shred the beef, then stir it back into the sauce. Fold in your cooked rigatoni, then finish with cheese, parsley, and basil.</li>
+            <li>Serve hot. Comfort in a bowl.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Caramelized Onion and Garlic Spaghetti</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>1 large onion, thinly sliced</li>
+            <li>4 garlic cloves, minced</li>
+            <li>2 tbsp chili crisp</li>
+            <li>1 cup of cream or coconut milk, room temperature</li>
+            <li>1 tbsp soy sauce, optional</li>
+            <li>1/2 cup fresh Parmesan cheese, grated</li>
+            <li>8 oz (225g) pasta of your choice</li>
+            <li>2 tbsp butter</li>
+            <li>1 tbsp olive oil</li>
+            <li>Seasonings (1 tsp each): paprika, garlic powder, salt, pepper, italian seasoning</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Slice your onion like it owes you money, mince that garlic (use fresh please), and measure out all your seasoning. Bring a cup of cream or coconut milk to room temperature.</li>
+            <li>Heat 2 tbsp butter + 1 tbsp olive oil in a large skillet over medium. Add in the onions and let them vibe for 15-20 minutes, stirring occasionally, until golden and jammy. If they start sticking, hit 'em with a splash of water.</li>
+            <li>While your onions are caramelizing like sweet little angels, boil a pot of salted water and cook the pasta until al dente. Drain, but don't forget to save some of that pasta water --- it's liquid gold.</li>
+            <li>When the onions are deeply golden, stir in your minced garlic and all the seasonings. Let it all bloom for a minute, then add the chili crisp and sauté for a minute. Pour in your cream (or coconut milk). Let it simmer and get cozy for a few minutes then add the grated Parmesan cheese.</li>
+            <li>Add your pasta to the sauce and toss to coat. Use that reserved pasta water to loosen things up if it's too thick --- you're going for silky, not sticky.</li>
+            <li>Serve hot with an extra spoon of chili crisp on top for a spicy kick and maybe a sprinkle of fresh parsley if you're feelin' fancy.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Mexican Street Corn White Chicken Chili</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>4 boneless, skinless chicken breasts</li>
+            <li>1 yellow onion, chopped</li>
+            <li>1 jalapeño, diced</li>
+            <li>4 cups chicken bone broth</li>
+            <li>1.5 cups sour cream</li>
+            <li>1/2 cup shredded monterey jack cheese, (I used a blend of monterey jack and mild cheddar)</li>
+            <li>4 cloves of garlic, minced</li>
+            <li>1/2 tablespoon dried oregano</li>
+            <li>1/2 teaspoon chili powder</li>
+            <li>2 cups frozen sweet white corn</li>
+            <li>1/2 cup fresh cilantro, chopped</li>
+            <li>1 lime, juice</li>
+            <li>3 tablespoons cornstarch</li>
+            <li>3 tablespoons water</li>
+            <li>olive oil</li>
+            <li>cotija cheese</li>
+            <li>bacon crumbles</li>
+            <li>tortilla strips</li>
+            <li>sliced avocado</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>In a large soup pot heat 1 tablespoon of olive oil. Add onion, jalapeño, and sauté until softened. Add garlic, oregano, chili powder, and stir until combined.</li>
+            <li>Add broth, chicken, salt, and pepper. Bring to a boil. Reduce heat, cover, and simmer for 15 minutes or until the chicken is cooked.</li>
+            <li>Transfer cooked chicken to a bowl and shred with forks. Add back into the pot. Add sour cream, shredded cheese, cilantro, corn, and lime juice.</li>
+            <li>In a small bowl combine cornstarch and water. Add into soup pot.</li>
+            <li>Simmer for 10 minutes. Stirring every few minutes.</li>
+            <li>Serve with crumbled bacon, cojita cheese, tortilla chips, and avocado!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>French Dip Sandwich</h2>
+        
+        <h3>Ingredients & Instructions</h3>
+        <p>In a slow cooker add:</p>
+        <ul>
+            <li>1 medium onion (roughly chopped)</li>
+            <li>11 cloves of garlic</li>
+            <li>4 sprigs of rosemary</li>
+            <li>1 cup of red wine</li>
+            <li>2 cups of beef stock</li>
+            <li>2 tablespoons of Worcestershire sauce</li>
+            <li>2 tablespoons of soy sauce</li>
+        </ul>
+
+        <p>Then get a 3 to 4 pound Chuck Roast, pat it dry with a paper towel, season it with some salt, and brown it (on all sides) in a pan on medium heat.</p>
+
+        <p>Then add it into your slow cooker and season generously on both sides with:</p>
+        <ul>
+            <li>beef bouillon powder</li>
+            <li>salt and pepper</li>
+            <li>granulated garlic</li>
+        </ul>
+
+        <p>Cook on low for 8 hours.</p>
+
+        <p>While it's cooking, make caramelized onions by adding 5 tablespoons of butter to a pan on medium-low along with 5 medium onions cut into half moons. Cook them for about 1 hour stirring frequently, and season them with salt and pepper.</p>
+
+        <p>Once the beef is done, separate it from the liquid and shred it all up in a bowl. Then stir in the caramelized onions. Then strain all of the juice from your slow cooker and set it aside (this is the Au Jus that you'll be dipping the sandwich in)</p>
+
+        <p>Lastly, in a bowl make a quick spread by combining:</p>
+        <ul>
+            <li>1/2 cup of mayo</li>
+            <li>3 tablespoons of cream style horseradish</li>
+            <li>salt and pepper to taste</li>
+        </ul>
+
+        <p>Then you're going to get a large French Baguette, and cut it down the middle (like you would cut a sub sandwich)</p>
+
+        <p>Add on the spread, then add the beef, top it with Swiss cheese, then close and cover it tightly with foil. Bake in the oven at 325 degrees for 10 to 15 minutes or until the cheese melts.</p>
+
+        <p>Then cut it into small sandwiches and serve them straight out of the oven with the delicious Au Jus on the side.</p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Shepherd's Pie Stuffed Potatoes</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>5 large russet potatoes</li>
+            <li>3 tbsp evoo</li>
+            <li>1 tbsp salt</li>
+            <li>3 cloves garlic</li>
+            <li>1 yellow onion</li>
+            <li>500g ground lamb</li>
+            <li>2 tbsp flour</li>
+            <li>2 tbsp tomato paste</li>
+            <li>2 tsp dried parsley</li>
+            <li>2 tsp dried oregano</li>
+            <li>2 tsp dried rosemary</li>
+            <li>2 tsp black pepper</li>
+            <li>2 tsp salt</li>
+            <li>1 tbsp Worcestershire</li>
+            <li>2.5 cups beef broth (or 2 cups broth, 1/2 cup red wine)</li>
+            <li>2 cups frozen veggies</li>
+            <li>150g cream cheese</li>
+            <li>2/3 cup caramelized onions</li>
+            <li>1-2 cloves garlic</li>
+            <li>2 tsp salt</li>
+            <li>2 tsp black pepper</li>
+            <li>100g cheddar cheese</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Chicken Pot Pie Twice Baked Potatoes</h2>
+        
+        <h4>Potatoes</h4>
+        <ul>
+            <li>2 Idaho potatoes, scrubbed clean</li>
+            <li>Olive oil</li>
+            <li>1/4 cup plain greek yogurt</li>
+            <li>2 tbsp butter</li>
+            <li>1/4 cup whole milk</li>
+            <li>1/4 cup shredded cheese (any that you love)</li>
+            <li>Salt and pepper, to taste</li>
+        </ul>
+
+        <h4>Chicken pot pie filling</h4>
+        <ul>
+            <li>1 tbsp butter</li>
+            <li>1/3 of an onion, diced</li>
+            <li>1 cup frozen mixed vegetables</li>
+            <li>8 oz pre-cooked chicken, diced</li>
+            <li>1/2 tsp dried thyme</li>
+            <li>1/2 tsp garlic powder</li>
+            <li>2 tbsp gluten free flour</li>
+            <li>1/3 cup whole milk</li>
+            <li>1/2 cup low sodium bone broth</li>
+            <li>Salt + pepper, to taste</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Bake your potatoes: Preheat oven to 400F and line a baking sheet with parchment paper. Rub potatoes with olive oil and sprinkle with salt. Bake for 1 hour.</li>
+            <li>Meanwhile, make your chicken pot pie filling. In a skillet over medium heat, add your butter and onion. Cook for 3 minutes. Stir in frozen vegetables, chicken, seasoning, and salt and pepper to taste. Cook for 1 minute, then add gluten free flour and mix well. Cook for 2 minutes. Pour in milk and broth. Bring to a simmer for 5 minutes, stirring frequently. Remove from heat and set aside.</li>
+            <li>Remove potatoes from oven and and carefully slice in half. Scoop out the center, leaving a rim of potato and skin to help hold in the filling. Mash the center of the potatoes with greek yogurt, butter and salt and pepper. Stir in milk and cheese until smooth and creamy.</li>
+            <li>Add chicken pot pie filling (note you will have extra that I like to serve on the side for more protein and veggies). Add mashed potatoes over the tops of each potato and sprinkle with extra cheese. Return to oven for 10-15 minutes, optional to broil add the end for a few minutes (be careful not to burn!!). Serve and enjoy!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Entrée</span>
+        <h2>Chunky Dumpling Salsa</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>3 tbsp chopped spring onion</li>
+            <li>3 tbsp chopped coriander</li>
+            <li>1 tbsp minced garlic</li>
+            <li>1/2 tbsp minced ginger</li>
+            <li>2 tbsp chopped roasted peanuts</li>
+            <li>1 tbsp roasted white sesame seeds</li>
+            <li>2 tbsp raw or caster sugar</li>
+            <li>5 tbsp light soy</li>
+            <li>4 tbsp rice vinegar</li>
+            <li>6 tbsp chilli oil (recipe on my feed)</li>
+            <li>1 tsp toasted sesame oil</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Mix well and adjust seasoning as desired.</li>
+            <li>Cook dumplings to your liking and dunk into salsa to enjoy!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- DESSERT RECIPES -->
+    <div class="recipe">
+        <span class="category-badge">Dessert</span>
+        <h2>Frosted Brown Sugar Pop Tart Bars</h2>
+        
+        <h4>Cookie Dough</h4>
+        <ul>
+            <li>2 ½ cups all-purpose flour</li>
+            <li>½ cup dark brown sugar</li>
+            <li>2 sticks (1 cup) cold salted butter, shredded</li>
+            <li>1 tablespoon vanilla extract</li>
+        </ul>
+
+        <h4>Filling</h4>
+        <ul>
+            <li>1 cup dark brown sugar</li>
+            <li>1 tablespoon all-purpose flour</li>
+            <li>1 tablespoon ground cinnamon</li>
+            <li>2 tablespoons salted butter, melted</li>
+            <li>¼ cup apple butter</li>
+            <li>2 teaspoons vanilla extract</li>
+            <li>1 teaspoon salt</li>
+        </ul>
+
+        <h4>Frosting</h4>
+        <ul>
+            <li>2 cups powdered sugar</li>
+            <li>¼ cup maple syrup</li>
+            <li>1 tablespoon vanilla extract</li>
+            <li>1 teaspoon ground cinnamon</li>
+            <li>coarse salt or sugar, for sprinkling (optional)</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>To make the cookie dough. In a bowl using an electric mixer, beat together the flour, sugar, and butter. Add the vanilla and 1/3 cup cold water. Beating until just combined, adding 1-2 tablespoons additional water as needed until the dough forms a ball.</li>
+            <li>Preheat the oven to 350° F. Line a 9×9 inch baking dish with parchment paper.</li>
+            <li>Divide the dough in half. Press half the dough into the prepared baking dish. Trace the 9×9 inch baking dish out on a sheet of parchment paper. Now, roll the remaining dough out just past the edges of the traced-out square. Set aside.</li>
+            <li>To make the filling. Combine all ingredients in a bowl. Evenly spread the filling dough into the baking dish. Carefully invert the reserved dough square over the filling, pressing down gently to secure. Trim away any excess dough.</li>
+            <li>Freeze the bars for 15 minutes. Bake for 40-45 minutes, until just set in the center. Let cool.</li>
+            <li>To make the frosting. In a bowl, whisk together all of the ingredients and 1-2 tablespoons of water until smooth. If your frosting is too thick, thin with 1-2 tablespoons of additional water.</li>
+            <li>Spread the frosting over the pop-tart bars. Let set a few minutes, then top with salt/sugar (optional). Let dry, then cut into bars. Serve or store in an airtight container for up to 3 days at room temperature.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Dessert</span>
+        <h2>London Fog Cake</h2>
+        
+        <p><em>Prep: 1 hour 30 minutes | Cook: 40 minutes | Total: 2 hours 10 minutes</em></p>
+
+        <h4>Earl Grey Cake</h4>
+        <ul>
+            <li>3 tbsp culinary lavender</li>
+            <li>3 tbsp earl grey tea</li>
+            <li>2 ¼ cups all-purpose flour</li>
+            <li>1 ½ tsp baking powder</li>
+            <li>¼ tsp baking soda</li>
+            <li>½ tsp salt</li>
+            <li>10 tbsp unsalted butter, softened</li>
+            <li>1 ½ cups granulated white sugar</li>
+            <li>3 eggs at room temperature</li>
+            <li>1 tbsp vanilla bean paste</li>
+            <li>1 cup buttermilk</li>
+        </ul>
+
+        <h4>For the Earl Grey Milk Soak</h4>
+        <ul>
+            <li>½ cup whole milk</li>
+            <li>2 tbsp Earl Grey tea</li>
+            <li>½ tbsp. culinary lavender</li>
+            <li>½ cup sweetened condensed milk</li>
+            <li>½ tsp vanilla bean paste</li>
+        </ul>
+
+        <h4>For the Lavender Cream Cheese Frosting</h4>
+        <ul>
+            <li>1 tbsp culinary lavender</li>
+            <li>1 cup unsalted butter, softened</li>
+            <li>8 oz cream cheese, cold</li>
+            <li>2 cups powdered sugar</li>
+            <li>1 spt vanilla bean paste</li>
+            <li>Purple food coloring</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        
+        <h4>Earl Grey Cake</h4>
+        <ol>
+            <li>Preheat the oven to 350°F (175°C). Grease a 9×9 inch light metal baking pan and line it with parchment paper. Add the Earl Grey tea and lavender to a food processor and pulse until finely ground. Pass through a sieve to separate any large bits.</li>
+            <li>In a medium bowl, whisk together the flour, Earl Grey tea, lavender, baking powder, baking soda, and salt. Then set aside the flour mixture.</li>
+            <li>Add the softened butter and granulated white sugar to a large bowl. Cream together for 2 minutes with an electric mixer on high speed.</li>
+            <li>Then add in the eggs and vanilla and mix on medium speed until pale in color and smooth, about 1 minute.</li>
+            <li>Add in the buttermilk and dry ingredients a little bit at a time, mixing on low speed until all is combined and the batter is smooth. Scrape the sides of the bowl with a rubber spatula as necessary.</li>
+            <li>Pour the batter into the prepared pan. Bake the cake for 38-44 minutes, or until a toothpick comes out clean from the center.</li>
+            <li>Let the cake cool in the pan on a wire rack for 30 minutes, then pull up on the parchment paper to release it from the pan. Let the cake continue cooling on the cooling rack until completely cooled.</li>
+        </ol>
+
+        <h4>For the Earl Grey Milk Soak</h4>
+        <ol>
+            <li>While the cake cools, work on the Earl Grey milk soak. Add the milk to a small sauce pan and heat over low heat until steaming, then add in the Earl Grey tea and lavender. Allow it to steep for 15 minutes, then remove from the heat. Pass the mixture through a sieve and allow the milk to cool.</li>
+            <li>Transfer the Earl Grey milk to a liquid measuring cup or something you can easily pour from. Mix in the sweetened condensed milk and vanilla. Set aside until ready to use.</li>
+        </ol>
+
+        <h4>For the Lavender Cream Cheese Frosting</h4>
+        <ol>
+            <li>Add the lavender to a food processor and pulse until finely ground. Pass through a sieve to separate any large bits.</li>
+            <li>Add the butter to a large mixing bowl and mix on high speed with an electric mixer until pale and fluffy, about 5 minutes.</li>
+            <li>Then add in the cream cheese and mix on high speed until fluffy, about 1 minute.</li>
+            <li>Sift in the powdered sugar, and add in the lavender and vanilla. Mix on low speed until combined, then on high speed for 1 minute until fluffy again. Add in purple food coloring and mix until combined.</li>
+        </ol>
+
+        <h4>Assembling the Cake</h4>
+        <ol>
+            <li>When the cake is completely cooled, cut a very thin layer off the top of the cake off using a sharp knife. Transfer it to a serving plate. Poke holes on the top of the cake using a wooden stick or the handle of a wooden spoon.</li>
+            <li>Slowly pour the Earl Grey milk mixture on top of the cake. It is thin so it should absorb into the cake and the poked holes easily, but do be patient as it does.</li>
+            <li>Frost the cake.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Dessert</span>
+        <h2>Espresso Martini Brownies</h2>
+        
+        <h4>Brownies</h4>
+        <ul>
+            <li>100 g (½ cups) Dark Chocolate Melted</li>
+            <li>170 g (⅔ cups) Butter Melted</li>
+            <li>100 g (½ cups) Light Brown Sugar</li>
+            <li>100 g (½ cups) Granulated Sugar</li>
+            <li>2 Medium Eggs</li>
+            <li>1 tsp Coffee Extract/Instant coffee dissolved in 2 tbsp water</li>
+            <li>85 g (⅔ cups) All Purpose Flour</li>
+            <li>30 g (6 tbsp) Cocoa Powder</li>
+            <li>150 g (¾ cups) Milk Chocolate Chopped</li>
+        </ul>
+
+        <h4>Buttercream</h4>
+        <ul>
+            <li>120 g (½ cups) Butter Room Temperature</li>
+            <li>275 g (2 ¼ cups) Icing Sugar</li>
+            <li>30 ml (1 floz) Coffee Liqueur</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        
+        <h4>Brownies</h4>
+        <ol>
+            <li>Pre-heat your oven to 170℃/370℉. Line an 8" Square Pan with greaseproof paper.</li>
+            <li>In a small bowl, break up the dark chocolate and melt in the microwave in 20 second intervals, stirring in between to make sure it doesn't burn.</li>
+            <li>In a large mixing bowl, whisk together melted butter and both sugars. With an electric/stand mixer, go for a solid 3-5minutes so it is totally combined. Add in the eggs and coffee/coffee extract and combine again.</li>
+            <li>Now, add the melted dark chocolate slowly (check it first, to make sure it isn't so hot that it will cook the eggs) and combine once again.</li>
+            <li>Add the flour and cocoa powder, plus a pinch of salt. Fold gently into the wet mixture with a rubber spatula or wooden spoon until just combined. Fold in the chopped chocolate.</li>
+            <li>Pour the batter into the lined pan and bake for 30 minutes. Let cool on a wire rack before making the frosting.</li>
+        </ol>
+
+        <h4>Frosting</h4>
+        <ol>
+            <li>Add the butter and the coffee liqueur (or just coffee if making alcohol free) to a large mixing bowl. Beat with a whisk on high for a minute to soften/combine everything.</li>
+            <li>Add half the icing sugar, whisk on high. Then add the remaining half and whisk everything on high until fluffy. Add coffee liqueur/icing sugar as required to meet your desired consistency. Spread over the cooled brownies, top with a little extra cocoa powder/hot chocolate powder, slice and serve!</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- BEVERAGE RECIPES -->
+    <div class="recipe">
+        <span class="category-badge">Beverage</span>
+        <h2>Corona Sunrise</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Corona beer</li>
+            <li>1.5 oz tequila</li>
+            <li>2 oz OJ</li>
+            <li>¾ oz grenadine</li>
+            <li>Lime</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Drink half the beer.</li>
+            <li>Add ingredients to beer.</li>
+            <li>Yay.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Beverage</span>
+        <h2>Iced Espresso Latte</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Espresso</li>
+            <li>Maple Syrup</li>
+            <li>Flaky Sea Salt</li>
+            <li>Ice</li>
+            <li>Milk (Dairy or Non-Dairy)</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Make espresso</li>
+            <li>Pour over maple syrup</li>
+            <li>Add flaky sea salt</li>
+            <li>Froth</li>
+            <li>Add ice and milk</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Beverage</span>
+        <h2>Piña Colada Beach Buckets</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>1.5 cups of pineapple mango tropical juice</li>
+            <li>1/2 can of Cutwater Spirits Piña Colada</li>
+            <li>1 Malibu Rum mini</li>
+            <li>1 coconut popsicle</li>
+            <li>Festive beach umbrella</li>
+            <li><em>Optional:</em> top with soda water to make it lighter & fizzy</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Combine.</li>
+            <li>Enjoy.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="recipe">
+        <span class="category-badge">Beverage</span>
+        <h2>Autumn Spritz Mocktail</h2>
+        
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Liquid I.V. Blackberry Peach</li>
+            <li>16 oz water</li>
+            <li>2 oz apple cider</li>
+            <li>1 oz orange juice</li>
+            <li>2 oz ginger beer to top off</li>
+            <li>Apple slices for garnish</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Add all ingredients except the ginger beer to a cocktail shaker with ice and shake until cold.</li>
+            <li>Strain into a wine glass filled with ice.</li>
+            <li>Top with ginger beer.</li>
+        </ol>
+    </div>
+
+    <button class="print-button no-print" onclick="window.print()">Print Cookbook</button>
+
+</body>
+</html>
+        
